@@ -1,15 +1,25 @@
-const http = require("http");
-
 const express = require("express");
+const bodyParser = require("body-parser");
 
 const app = express();
 
-app.use((req, res, next) => {
+app.use(bodyParser.urlencoded({ extended: false }));
+
+// app.use(express.urlencoded({ extended: true }));
+
+app.use("/add-route", (req, res, next) => {
   console.log("in the middleware");
-  next();
+  res.send(
+    '<form action="/product" method="POST"><input type="text" name="title"><button>Add Product</button></form>'
+  );
 });
 
-app.use((req, res, next) => {
+app.use("/product", (req, res) => {
+  console.log(req.body);
+  res.redirect("/");
+});
+
+app.use("/", (req, res, next) => {
   console.log("in the next middleware");
   res.send("<h1>hello from express</h1>");
 });
