@@ -4,7 +4,9 @@ const express = require("express");
 const router = express.Router();
 
 router.use("/", (req, res, next) => {
-  res.sendFile(path.join(__dirname, "../", "views", "page-not-found.html"));
+  res
+    .status(404)
+    .sendFile(path.join(__dirname, "../", "views", "page-not-found.html"));
 });
 
 module.exports = router;
