@@ -69,6 +69,8 @@ main {
 .card__content h2,
 .card__content p {
   margin: 0;
+  display: flex;
+  justify-content: center;
 }
 
 .card__image {
