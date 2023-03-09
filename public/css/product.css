@@ -7,6 +7,7 @@
 .product-item {
   width: 20rem;
   max-width: 95%;
+  border-radius: 8px;
 }
 
 .product-title {
@@ -15,10 +16,13 @@
 }
 
 .product-price {
+  align-items: center;
   text-align: center;
   color: darkslateblue;
   margin-bottom: 0.5rem;
+  border-radius: 8px;
 }
+
 .product-description {
   text-align: center;
 }
