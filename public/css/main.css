@@ -80,6 +80,8 @@ main {
   width: 100%;
 }
 .card__actions {
+  display: flex;
+  justify-content: center;
   padding: 1rem;
   text-align: center;
 }
@@ -87,6 +89,8 @@ main {
 .card__actions button,
 .card__actions a {
   margin: 0 0.25rem;
+  text-decoration: none;
+  padding: 4px;
 }
 
 .btn {
@@ -95,6 +99,7 @@ main {
   color: cornflowerblue;
   background: whitesmoke;
   cursor: pointer;
+  border-radius: 3px;
 }
 
 .btn:hover,
