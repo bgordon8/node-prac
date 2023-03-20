@@ -1,1 +1,26 @@
-[{"id":"1231231","title":"First new product","price":"1.99","description":"First new product"},{"id":"1231","title":"Second New Product","price":"2.99","description":"Second new Product"},{"id":"12312334534","title":"Third newest addition","price":"12.98","description":"The third more descriptive addition to the products list for shopping"},{"title":"A new product again","price":"12.99","description":"This is to test the details button after adding a new product.","id":"0.978541477471057"}]
+[
+  {
+    "id": "1231231",
+    "title": "First new product",
+    "price": "1.99",
+    "description": "First new product"
+  },
+  {
+    "id": "1231",
+    "title": "Second New Product",
+    "price": "2.99",
+    "description": "Second new Product"
+  },
+  {
+    "id": "12312334534",
+    "title": "Third newest addition",
+    "price": "12.98",
+    "description": "The third more descriptive addition to the products list for shopping"
+  },
+  {
+    "title": "A new product again",
+    "price": "12.99",
+    "description": "This is to test the details button after adding a new product.",
+    "id": "0.978541477471057"
+  }
+]
