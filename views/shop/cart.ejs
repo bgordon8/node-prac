@@ -2,21 +2,46 @@
   </head>
 <body>
   <%- include('../includes/navigation.ejs') %>
-  <% if (products.length > 0)  { %>
-    <ul>
-      <% products.forEach(p => { %>
-        <li>
-         <p>
-           <%= p.productData.title %> (<%= p.qty %>)
-         </p>  
-         <form action="/cart-delete-item" method="POST">
-            <button class="btn" type="submit">Delete</button>
-              <input type="hidden" name="productId" value="<%= p.productData.id %>">
-         </form>
-        </li>
-      <% }) %>  
-    </ul>
-    <% } else { %>
+  <main>
+    <% if (products.length > 0)  { %>
+        <article class=" card product-item">
+          <div class="price">
+            
+              <h1 class="product__title">
+                Total Price:
+              </h1> 
+            
+              <h1 class="product__title">
+                <%= totalPrice %>
+              </h1> 
+            
+          </div>
+          </article>
+      <div class="grid">
+        <% for (let product of products) { %>
+          <article class="card product-item">
+            <header class="card__header">
+              <h1 class="product__title"><%= product.productData.title %></h1>
+            </header>
+            <div class="card__image">
+              <img src="" alt="new product" />
+            </div>
+            <div class="card__content">
+              <h2 class="product__price"><%= product.productData.price %></h2>
+            </div>
+            <div class="card__actions">
+              <a href="/products/<%= product.productData.id %>" class="btn">Details</a>
+              <form action="/cart-delete-item" method="POST">
+                <button class="btn" type="submit">Delete</button>
+                <input type="hidden" name="productId" value="<%= product.productData.id %>">
+              </form>
+            </div>
+          </article>
+          <% } %>
+        
+      </div> 
+     <% } else { %>
       <h1>No Products in Cart!</h1>
-   <% } %> 
+    <% } %> 
+  </main>
   <%- include('../includes/end.ejs') %>

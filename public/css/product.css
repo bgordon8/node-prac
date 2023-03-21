@@ -4,6 +4,10 @@
   margin: auto;
 }
 
+.price {
+  display: flex;
+  justify-content: space-between;
+}
 .product-item {
   width: 20rem;
   max-width: 95%;

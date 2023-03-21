@@ -97,6 +97,11 @@ main {
   padding: 4px;
 }
 
+.price {
+  display: flex;
+  justify-content: space-between;
+}
+
 .btn {
   font: inherit;
   border: 1px solid darkslateblue;
