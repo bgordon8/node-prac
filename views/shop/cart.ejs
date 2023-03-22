@@ -20,6 +20,11 @@
       <div class="grid">
         <% for (let product of products) { %>
           <article class="card product-item">
+            <div class="price">
+              <h3>Qty:</h3>
+              <h1><%= product.qty %></h1>
+            </div>
+            <hr>
             <header class="card__header">
               <h1 class="product__title"><%= product.productData.title %></h1>
             </header>

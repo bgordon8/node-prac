@@ -52,7 +52,7 @@ exports.getCart = (req, res, next) => {
         pageTitle: "Your Cart",
         path: "/cart",
         products: cartProducts,
-        totalPrice: cart.totalPrice,
+        totalPrice: cart.totalPrice.toFixed(2),
       });
     });
   });
