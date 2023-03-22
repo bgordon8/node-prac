@@ -57,6 +57,12 @@ main {
 .card {
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
   margin: 25px;
+  background-color: white;
+}
+
+.card:hover {
+  box-shadow: 0 22px 25px rgba(0, 0, 0, 0.26);
+  background-color: whitesmoke;
 }
 
 .card__header,
@@ -115,8 +121,23 @@ main {
 
 .btn:hover,
 .btn:active {
-  background-color: darkslateblue;
+  background-color: cornflowerblue;
   color: whitesmoke;
+}
+
+.number-circle {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  text-align: center;
+  font-size: 21px;
+  border: 5px solid cornflowerblue;
+  background: lightcyan;
+  position: relative;
+  top: 4px;
+  left: 100%;
+  transform: translate(-50%);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
 }
 
 button {

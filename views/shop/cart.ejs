@@ -3,26 +3,25 @@
 <body>
   <%- include('../includes/navigation.ejs') %>
   <main>
+    <article class=" card product-item">
+      <div class="price">
+        
+        <h1 class="product__title">
+          Total Price:
+        </h1> 
+        
+        <h1 class="product__title">
+          <%= totalPrice %>
+        </h1> 
+        
+      </div>
+    </article>
     <% if (products.length > 0)  { %>
-        <article class=" card product-item">
-          <div class="price">
-            
-              <h1 class="product__title">
-                Total Price:
-              </h1> 
-            
-              <h1 class="product__title">
-                <%= totalPrice %>
-              </h1> 
-            
-          </div>
-          </article>
       <div class="grid">
         <% for (let product of products) { %>
           <article class="card product-item">
-            <div class="price">
-              <h3>Qty:</h3>
-              <h1><%= product.qty %></h1>
+            <div class="number-circle">
+              <%= product.qty %>
             </div>
             <hr>
             <header class="card__header">
